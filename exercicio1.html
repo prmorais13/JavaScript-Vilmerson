@@ -1,0 +1,28 @@
+<html>
+    <script>
+        Calculadora = function(marca) {
+            this.marca = marca;
+        }
+
+        c = new Calculadora('HP');
+
+        Calculadora.prototype.verificarMaior = function() {
+            n1 = document.getElementById('txtN1').value;
+            n2 = document.getElementById('txtN2').value;
+
+            if (n1 > n2) {
+                window.alert('O maior número é: ' + n1);
+            } else {
+                window.alert('O maior número é: ' + n2);
+            }
+        }
+
+
+
+    </script>
+    <body>
+        <input id="txtN1" type="text" placeholder="Digite o N1">
+        <input id="txtN2" type="text" placeholder="Digite N2">
+        <input type="button" value="Enviar" onclick="c.verificarMaior()">
+    </body>
+</html>
